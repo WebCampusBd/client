@@ -5,7 +5,7 @@ const Profile = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   useEffect(() => {
-    fetch("http://localhost:1000/profile", {
+    fetch("https://server-yw48.onrender.com/profile", {
       headers: {
         Authorization: token,
       },

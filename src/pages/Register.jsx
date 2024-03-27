@@ -8,7 +8,7 @@ const Register = () => {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch("http://localhost:1000/profile", {
+    fetch("https://server-yw48.onrender.com/profile", {
       headers: {
         Authorization: token,
       },
@@ -22,7 +22,7 @@ const Register = () => {
   }, []);
   const handleRegister = (e) => {
     e.preventDefault();
-    fetch("http://localhost:1000/register", {
+    fetch("https://server-yw48.onrender.com/register", {
       method: "POST",
       body: JSON.stringify({
         username,

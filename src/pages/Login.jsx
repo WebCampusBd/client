@@ -7,7 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const token = localStorage.getItem("token");
   useEffect(() => {
-    fetch("http://localhost:1000/profile", {
+    fetch("https://server-yw48.onrender.com/profile", {
       headers: {
         Authorization: token,
       },
@@ -20,7 +20,7 @@ const Login = () => {
   }, []);
   const handleLogin = (e) => {
     e.preventDefault();
-    fetch("http://localhost:1000/login", {
+    fetch("https://server-yw48.onrender.com/login", {
       method: "POST",
       body: JSON.stringify({
         username,
